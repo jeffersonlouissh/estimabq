@@ -12,3 +12,7 @@ function test() {
   console.log("log de tests");
 }
 export default Home;
+
+function test3() {
+  console.log("tt");
+}
