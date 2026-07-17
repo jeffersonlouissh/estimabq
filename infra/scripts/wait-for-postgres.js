@@ -11,8 +11,8 @@ function checkPostgres() {
       return;
     }
 
-    console.log("\n🟢 Postgres esta pronto e aceitando conexoes\n");
+    console.log("\n🟢 Postgres is ready and accpeting connections");
   }
 }
-console.log("\n 🔴 Waiting for postgres conection");
+console.log("\n🔴 Waiting for postgres conection");
 checkPostgres();
