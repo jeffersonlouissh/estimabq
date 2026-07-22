@@ -12,7 +12,7 @@ test("GET to /api/v1/migrations should return 200", async () => {
 
   const responseBody = await response.json();
 
-  const db = await database.query("SELECT NOW();");
+  await database.query("SELECT NOW();");
 
   expect(Array.isArray(responseBody)).toBe(true);
   expect(responseBody.length).toBeGreaterThan(0);
