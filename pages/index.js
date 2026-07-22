@@ -1,7 +1,6 @@
 function Home() {
   return (
     <>
-      <h1>Oii Amor ❤️</h1>
       <h3> Home Pages</h3>
       <h2>I'm back</h2>{" "}
     </>
