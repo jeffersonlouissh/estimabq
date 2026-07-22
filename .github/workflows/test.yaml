@@ -10,7 +10,7 @@ jobs:
 
       - uses: actions/setup-node@v6
         with:
-          node-version: "24.14.0"
+          node-version: "lts/hydrogen"
 
       - run: npm ci
 
