@@ -10,7 +10,7 @@ jobs:
 
       - uses: actions/setup-node@v6
         with:
-          node-version: "lts/krypton"
+          node-version: "24.14.0"
       
       - run: npm ci
 
