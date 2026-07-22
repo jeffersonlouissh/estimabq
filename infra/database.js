@@ -2,7 +2,6 @@ import { Client } from "pg";
 
 async function query(queryObject) {
   let client;
-
   try {
     client = await getNewClient();
     const response = await client.query(queryObject);
@@ -31,5 +30,5 @@ async function getNewClient() {
 function getSSLValue() {
   return process.env.NODE_ENV == "production" ? true : false;
 }
-
-export default { query, getNewClient };
+const database = { query, getNewClient };
+export default database;
