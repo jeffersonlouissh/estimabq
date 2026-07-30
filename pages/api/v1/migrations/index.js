@@ -14,7 +14,7 @@ export default async function migrations(request, response) {
     dbClient = await database.getNewClient();
     const defaultMigrationOptions = {
       dbClient,
-      dryRun: true,
+      dryRun: false,
       dir: join("infra", "migrations"),
       direction: "up",
       verbose: true,
@@ -23,7 +23,7 @@ export default async function migrations(request, response) {
 
     if (request.method == "GET") {
       const pendingMigrations = await runner(defaultMigrationOptions);
-
+      console.log("[TEST][GET]", pendingMigrations);
       return response.status(200).json(pendingMigrations);
     }
 
@@ -32,7 +32,7 @@ export default async function migrations(request, response) {
         ...defaultMigrationOptions,
         dryRun: false,
       });
-
+      console.log("[TEST][POST]", migratedMigrations);
       if (migratedMigrations.length > 0) {
         return response.status(201).json(migratedMigrations);
       }
