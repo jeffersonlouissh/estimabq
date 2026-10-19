@@ -1,4 +1,4 @@
-async function fetStatus(params) {
+async function fetStatus() {
   const response = await fetch("http://estimabq.com.br/api/v1/status");
   const responseBody = await response.json();
   return responseBody;
